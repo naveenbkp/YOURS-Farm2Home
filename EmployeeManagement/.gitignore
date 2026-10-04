@@ -1,14 +1,25 @@
-## Build output
+# Build output
 bin/
 obj/
 
-## Visual Studio
+# Visual Studio cache/settings
 .vs/
 *.user
 *.suo
 
-## User-specific files
-*.userprefs
-
-## Logs
+# Build/log files
 *.log
+
+# Test results
+TestResults/
+*.trx
+
+# NuGet
+packages/
+
+# ASP.NET Core local development
+wwwroot/
+
+# OS files
+.DS_Store
+Thumbs.db
