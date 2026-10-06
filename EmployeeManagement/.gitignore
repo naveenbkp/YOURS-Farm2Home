@@ -1,6 +1,10 @@
-# Build output
+# Build output in all projects
 [Bb]in/
 [Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+publish/
 
 # Visual Studio
 .vs/
@@ -8,33 +12,44 @@
 *.suo
 *.userosscache
 *.sln.docstates
+*.rsuser
 
 # Visual Studio Code
 .vscode/
 
-# Rider / JetBrains
+# JetBrains Rider
 .idea/
 *.sln.iml
+*.DotSettings.user
 
-# NuGet
+# NuGet packages
+packages/
 *.nupkg
 *.snupkg
-packages/
-.nuget/
 
-# Test results
+# Test results and coverage
 TestResults/
 *.trx
 coverage/
 coverage.*
+*.coverage
+*.coveragexml
 
 # Logs
+[Ll]ogs/
 *.log
-
-# OS files
-.DS_Store
-Thumbs.db
 
 # Temporary files
 *.tmp
 *.temp
+*.bak
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local environment variables
+.env
+.env.*
+!.env.example
