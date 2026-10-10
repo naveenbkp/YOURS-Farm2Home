@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { EmployeeService } from './services/employee.service';
-import { Employee } from './models/employee';
 import { CommonModule } from '@angular/common';
+import { Product } from './models/Product';
 
 @Component({
   selector: 'app-root',
@@ -15,10 +15,9 @@ export class AppComponent implements OnInit {
 
   title = 'EmployeeApp';
 
-  employees: Employee[] = [];
+  employees: Product[] = [];
 
   constructor(private employeeService: EmployeeService) {}
-
   ngOnInit(): void {
     this.employeeService.getEmployees().subscribe({
       next: (data) => {

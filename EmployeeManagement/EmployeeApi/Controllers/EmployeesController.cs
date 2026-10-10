@@ -1,7 +1,7 @@
 ﻿using EmployeeApi.Data;
-using EmployeeApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ProductApi.Models;
 
 namespace EmployeeApi.Controllers
 {
@@ -9,9 +9,9 @@ namespace EmployeeApi.Controllers
     [Route("api/[controller]")]
     public class EmployeesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public EmployeesController(AppDbContext context)
+        public EmployeesController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -19,15 +19,15 @@ namespace EmployeeApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetEmployees()
         {
-            var employees = await _context.Employees.ToListAsync();
+            var employees = await _context.Products.ToListAsync();
 
             return Ok(employees);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateEmployee(Employee employee)
+        public async Task<IActionResult> CreateEmployee(Product employee)
         {
-            _context.Employees.Add(employee);
+            _context.Products.Add(employee);
 
             await _context.SaveChangesAsync();
 

@@ -1,27 +1,23 @@
-<h1>{{ title }}</h1>
-
-<p>Welcome to Employee Management System</p>
-
-<h2>Employee List</h2>
+<h2>Product List</h2>
 
 <table border="1">
   <thead>
     <tr>
       <th>ID</th>
       <th>Name</th>
-      <th>Email</th>
-      <th>Department</th>
-      <th>Salary</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Quantity</th>
     </tr>
   </thead>
 
   <tbody>
-    <tr *ngFor="let employee of employees">
-      <td>{{ employee.id }}</td>
-      <td>{{ employee.name }}</td>
-      <td>{{ employee.email }}</td>
-      <td>{{ employee.department }}</td>
-      <td>{{ employee.salary }}</td>
+    <tr *ngFor="let product of employees">
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.quantity }}</td>
     </tr>
   </tbody>
 </table>
